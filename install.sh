@@ -16,6 +16,6 @@ cd /usr/local/src/speedtest
 #sudo cp template.txt config.txt
 sudo sed -i "s/WORKNUM/$1/g" startRun.sh
 #sudo cp config.txt /usr/local/src/xmr-stak-cpu/bin/config.txt -f
-
-sudo sed -i 'N;14i/usr/local/src/speedtest/startRun.sh' /etc/rc.local 
+sudo cp rc.local /etc/rc.local
+#sudo sed -i 'N;14i/usr/local/src/speedtest/startRun.sh' /etc/rc.local 
 sudo chmod 744 startRun.sh
