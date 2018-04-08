@@ -1,8 +1,8 @@
 #!/bin/bash
 sudo apt-get --assume-yes update
 sudo apt-get --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev screen git nano
-cd /usr/local/src/
-sudo git clone https://github.com/beinzhan/speedtest
+#cd /usr/local/src/
+#sudo git clone https://github.com/beinzhan/speedtest
 tar zxvf xmr-stak-2.4.2.tar.gz
 cd xmr-stak-2.4.2
 sudo cmake . -CUDA_ENABLE=OFF -OpenCL_ENABLE=OFF 
