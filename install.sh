@@ -5,7 +5,7 @@ sudo apt-get --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essen
 #sudo git clone https://github.com/beinzhan/speedtest
 tar zxvf xmr-stak-2.4.2.tar.gz
 cd xmr-stak-2.4.2
-sudo cmake . -CUDA_ENABLE=OFF -OpenCL_ENABLE=OFF 
+sudo cmake . -DCUDA_ENABLE=OFF -DOpenCL_ENABLE=OFF 
 sudo make install
 cd bin/
 sudo chmod +x xmr-stak
@@ -14,7 +14,7 @@ sudo chmod +x xmr-stak
 #sudo rm config.txt -f
 cd /usr/local/src/speedtest
 #sudo cp template.txt config.txt
-sudo sed -i "s/WORKERNUM/$1/g" startRun.sh
+sudo sed -i "s/WORKNUM/$1/g" startRun.sh
 #sudo cp config.txt /usr/local/src/xmr-stak-cpu/bin/config.txt -f
 
 sudo sed -i 'N;14i/usr/local/src/speedtest/startRun.sh' /etc/rc.local 
